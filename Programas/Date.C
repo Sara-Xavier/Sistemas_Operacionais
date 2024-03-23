@@ -2,7 +2,7 @@
 #include <time.h>
 
 int main() {
-  time_t currentTime; //Get time in seconds
+  time_t currentTime; 
   time(&currentTime);
 
   struct tm *localTime = localtime(&currentTime);

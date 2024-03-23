@@ -15,25 +15,27 @@
 
 <br>
 <br>
-
+<hr>
 <b>
 #include <stdio.h>      //Esta é a biblioteca padrão de entrada e saída <br>
 #include <time.h>       // Esta é a biblioteca de manipulação/gerenciamento de tempo <br>
 
 int main() { <br>
-  time_t currentTime; //Get time in seconds <br>
-  time(&currentTime); <br>
+  time_t currentTime; // usamos a biblioteca time com a unidade t de tempo. Criamos a variável currentTime<br>  
+  time(&currentTime); // O current indica que estamos falando de tempo atual do sistema <br> 
+  // o operador de endereço '&' que passa o endereço de memoria da variável para a função time <br>
 
-  struct tm *localTime = localtime(&currentTime); <br>
+  struct tm *localTime = localtime(&currentTime); //Aqui, a estrutura 'struct' da biblioteca <time.h> armazena a hora local no endereço de memória da variável 'currentTime'<br>
     
   printf("Hora atual: %02d:%02d:%02d\n", localTime->tm_hour, localTime->tm_min, localTime->tm_sec); <br>
-
+  // formatei a hora em '%02d:%02d:%02d\n"', o 'd' ficou com dois dígitos, preenchendo com 2 '0' se necessário. <br>
+  // 'localTime' acessa o membro 'tm_hour' da estrutura apontada por "localTime".  <br>
+  // O print vai ser feito com a hora atual fomatada como "HH:MM:SS" <br>
   return 0; <br>
 
 }
-
 </b>
-
+<hr>
 <br>
 <br>
 
