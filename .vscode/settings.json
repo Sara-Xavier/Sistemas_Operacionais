@@ -1,5 +1,7 @@
 {
     "files.associations": {
         "Date.C": "cpp"
-    }
+    },
+    "C_Cpp.default.compilerPath": "/root/Sistemas_Operacionais/Programas/Date.C",
+    "C_Cpp.errorSquiggles": "disabled"
 }
