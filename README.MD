@@ -15,9 +15,11 @@
 
 <br>
 <br>
-#include <stdio.h> //Esta é a biblioteca padrão de entrada e saída <br>
-#include <time.h>  // Esta é a biblioteca de manipulação/gerenciamento de tempo <br>
+#include <stdio.h>      //Esta é a biblioteca padrão de entrada e saída <br>
+#include <time.h>       // Esta é a biblioteca de manipulação/gerenciamento de tempo <br>
 
+
+<bold>
 int main() { <br>
   time_t currentTime; //Get time in seconds <br>
   time(&currentTime); <br>
@@ -29,6 +31,8 @@ int main() { <br>
   return 0; <br>
 
 }
+
+</bold>
 <br>
 <br>
 
