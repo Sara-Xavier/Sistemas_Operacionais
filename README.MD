@@ -11,21 +11,25 @@
 
 <h2> Detalhando os conceitos dos programas </h2>
 <h3> Programa Date.c </h3>
-<p>  A proposta do programa DAte.c é de mostrar hora e data atual. Vamos passar linha por linha, explicando os conceitos do programa:
+<p>  A proposta do programa Date.c é de mostrar hora e data atual. Vamos passar linha por linha, explicando os conceitos do programa:
 
-#include <stdio.h> //Esta é a biblioteca padrão de entrada e saída
-#include <time.h>  // Esta é a biblioteca de manipulação/gerenciamento de tempo 
+<br>
+<br>
+#include <stdio.h> //Esta é a biblioteca padrão de entrada e saída <br>
+#include <time.h>  // Esta é a biblioteca de manipulação/gerenciamento de tempo <br>
 
-int main() {
-  time_t currentTime; //Get time in seconds
-  time(&currentTime);
+int main() { <br>
+  time_t currentTime; //Get time in seconds <br>
+  time(&currentTime); <br>
 
-  struct tm *localTime = localtime(&currentTime);
+  struct tm *localTime = localtime(&currentTime); <br>
     
-  printf("Hora atual: %02d:%02d:%02d\n", localTime->tm_hour, localTime->tm_min, localTime->tm_sec);
+  printf("Hora atual: %02d:%02d:%02d\n", localTime->tm_hour, localTime->tm_min, localTime->tm_sec); <br>
 
-  return 0;
+  return 0; <br>
 
 }
+<br>
+<br>
 
  </p>
