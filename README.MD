@@ -7,7 +7,7 @@
 <p> Para compilar e conseguir usar as chamadas de sistemas no ambiente Linux em C/C++, baixei e instalei o Subsistema do Windows para Linux (WSL), utilizando o sistema Ubuntu. Instalei também as ferramentas de build para compilação e depuração, já que apenas o WSL não estava compilando o código C/C++: https://learn.microsoft.com/pt-br/cpp/build/walkthrough-build-debug-wsl2?view=msvc-170 </p>
 
 <hr>
-<br>
+<br>  
 
 <h2> Detalhando os conceitos dos programas </h2>
 <h3> Programa Date.c </h3>

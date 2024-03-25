@@ -12,3 +12,5 @@ int main() {
   return 0;
 
 }
+
+//Mostra a hora atual. 
