@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include <stdio.h>  //Esta é a biblioteca padrão de entrada e saída
 #include <stdlib.h> // Biblioteca de informações sobre o sistema
-#include <time.h>
+#include <time.h>   // Esta é a biblioteca de manipulação/gerenciamento de tempo
 
 int main() {
     FILE *uptimeFile = fopen("/proc/uptime", "r");
