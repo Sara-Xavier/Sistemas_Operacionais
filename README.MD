@@ -12,7 +12,7 @@ Olá, este repositório é destinado a uma atividade da disciplina de Sistemas O
 
 ***Programa Date.c***
 
-A proposta do programa Date.c é de mostrar hora e data atual. Vamos passar linha por linha, explicando os conceitos do programa:
+Este programa mostra a hora atual. Utilizei a chamada de sistema time() para obter o tempo atual em segundos desde a época (00:00:00 UTC em 1 de janeiro de 1970).
  ```
 #include <stdio.h>          //Esta é a biblioteca padrão de entrada e saída <br>
 #include <time.h>           // Esta é a biblioteca de manipulação/gerenciamento de tempo
@@ -39,7 +39,7 @@ int main() {
 
 
 ***Programa Uptime.c***
-O programa Uptime deve mostrar em HH:MM:SS a quanto tempo o Sistema Operacional está em funcionamento
+Este programa mostra há quanto tempo o computador está ligado. usei a chamada de sistema sysinfo() para obter informações sobre o sistema, incluindo o tempo de inicialização.
 
 ```
 #include <stdio.h>    // Biblioteca de entrada/saída padrão de C
@@ -72,5 +72,15 @@ int main() {
 
     return 0;
 }
+
+```
+
+
+
+***Programa Ls.c***
+Para listar os arquivos em um diretório, Utilizei as chamadas de sistema 'opendir()', 'readdir()' e 'closedir()' para abrir, ler e fechar o diretório, respectivamente:
+
+```
+
 
 ```
