@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> #Biblioteca de informações sobre o sistema
+#include <stdlib.h> // Biblioteca de informações sobre o sistema
 #include <time.h>
 
 int main() {

@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "Date.C": "cpp"
+        "Date.C": "cpp",
+        "time.h": "c"
     }
 }
