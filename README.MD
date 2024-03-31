@@ -13,7 +13,7 @@ Olá, este repositório é destinado a uma atividade da disciplina de Sistemas O
 
 ***Detalhando os conceitos dos programas***   
 
-[Date](https://github.com/Sara-Xavier/Sistemas_Operacionais/blob/main/Programas/Date.C) - Este programa mostra a hora atual (GMT - 03:00), formato hh:mm:ss.
+[Date](https://github.com/Sara-Xavier/Sistemas_Operacionais/blob/main/Programas/Date.c) - Este programa mostra a hora atual (GMT - 03:00), formato hh:mm:ss.
 
 [Uptime](https://github.com/Sara-Xavier/Sistemas_Operacionais/blob/main/Programas/Uptime.c) - Este programa mostra há quanto tempo o computador está ligado.
 
