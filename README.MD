@@ -77,12 +77,11 @@ int main() {
 
 
 ***Programa Cp.c***
-Copia conteúdo de um arquivo para outro. Não consigo compilar o programa sem que ele caia na mensagem de erro que criei, mesmo colocando os argumentos na linha de comando.
+Copia conteúdo de um arquivo para outro, e cria arquivo cópia caso ele não exista
 
 ```
 #include <stdio.h>      // Biblioteca de entrada/saída padrão de C
 #include <stdlib.h>     // Biblioteca de informações sobre o sistema, memória dinâmica e processos
-
 #define BUFFER_SIZE 4096// Buffer de tamanho fixo de 4096 bytes para realizar operações de leitura e escrita nos arquivos
 
 int main(int argc, char *argv[]){
@@ -125,6 +124,8 @@ int main(int argc, char *argv[]){
 
     return 0;
 }
+
+
 ```
 
 

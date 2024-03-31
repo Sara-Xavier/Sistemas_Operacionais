@@ -1,6 +1,5 @@
 #include <stdio.h>      // Biblioteca de entrada/saída padrão de C
 #include <stdlib.h>     // Biblioteca de informações sobre o sistema, memória dinâmica e processos
-
 #define BUFFER_SIZE 4096// Buffer de tamanho fixo de 4096 bytes para realizar operações de leitura e escrita nos arquivos
 
 int main(int argc, char *argv[]){
