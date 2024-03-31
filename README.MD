@@ -43,5 +43,3 @@ Olá, este repositório é destinado a uma atividade da disciplina de Sistemas O
 - Cat: fopen() abriu arquivo especificado, fgetc() lê carecteres dos arquivos, byte a byte e fclose() fecha os arquivos após a leitura.
 
 - Mkdir: mkdir() cria um novo diretório com o nome.
-
-lalalalalalalalallaladkslahbdjsa
