@@ -15,11 +15,6 @@ int main(int argc, char *argv[]) {
         char input[256];
         fgets(input, sizeof(input), stdin);
         
-        // Remove o caractere de nova linha do final da string, se presente
-        if (input[strlen(input) - 1] == '\n') {
-            input[strlen(input) - 1] = '\0';
-        }
-
         // Se o usuário não digitou nada, use o diretório de trabalho atual
         if (strlen(input) == 0) {
             dir_path = getcwd(NULL, 0);
