@@ -77,7 +77,7 @@ int main() {
 
 
 
-***Programa Ls.c***
+***Programa Cp.c***
 Copia conteúdo de um arquivo para outro. Não consigo compilar o programa sem que ele caia na mensagem de erro que criei, mesmo colocando os argumentos na linha de comando.
 
 ```
