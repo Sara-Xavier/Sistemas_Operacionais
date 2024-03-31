@@ -30,6 +30,8 @@ Olá, este repositório é destinado a uma atividade da disciplina de Sistemas O
 
 
 # Algumas das funções de sistemas utilizadas:
-- Date: utilizei a chamada de sistema time() para obter o tempo atual em segundos desde a época (00:00:00 UTC em 1 de janeiro de 1970).
+- Date: utilizei a chamada de sistema time() para obter o tempo atual em segundos desde a época (00:00:00 UTC em 1 de janeiro de 1970). Também utilizei a localtime() para converter o tempo em segundos para uma estrutura de tempo local, para ajustar o fuso. A strftime() formata a estrutura de tempo local em uma string com formato desejado (hh:mm:s).
 
 - Uptime: utilizei a chamada de sistema sysinfo() para obter informações sobre o sistema, incluindo o tempo de inicialização.
+
+- Cp: open() abre o arquivo de origem para leitura, também pode criar arquivo de destino para escrita. read() lê dados do arquivo de origem. write() escreve dados no arquivo de destino, e close() fecha os descritores de arquivo. 
