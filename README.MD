@@ -35,3 +35,9 @@ Olá, este repositório é destinado a uma atividade da disciplina de Sistemas O
 - Uptime: utilizei a chamada de sistema sysinfo() para obter informações sobre o sistema, incluindo o tempo de inicialização.
 
 - Cp: open() abre o arquivo de origem para leitura, também pode criar arquivo de destino para escrita. read() lê dados do arquivo de origem. write() escreve dados no arquivo de destino, e close() fecha os descritores de arquivo. 
+
+- Rm: unlink() foi usado para remover um arquivo.
+
+- Cat: fopen() abriu arquivo especificado, fgetc() lê carecteres dos arquivos, byte a byte e fclose() fecha os arquivos após a leitura.
+
+- Mkdir: mkdir() cria um novo diretório com o nome.
