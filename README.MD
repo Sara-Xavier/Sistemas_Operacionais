@@ -38,6 +38,8 @@ Olá, este repositório é destinado a uma atividade da disciplina de Sistemas O
 
 - Rm: unlink() foi usado para remover um arquivo.
 
+- Mv: open() abre o arquivo de origem para leitura, também pode criar arquivo de destino para escrita. read() lê dados do arquivo de origem. write() escreve dados no arquivo de destino, e close() fecha os descritores de arquivo, unlink() foi usado para remover um arquivo.
+
 - Cat: fopen() abriu arquivo especificado, fgetc() lê carecteres dos arquivos, byte a byte e fclose() fecha os arquivos após a leitura.
 
 - Mkdir: mkdir() cria um novo diretório com o nome.
