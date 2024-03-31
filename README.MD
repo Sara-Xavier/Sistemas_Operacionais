@@ -25,6 +25,8 @@ Olá, este repositório é destinado a uma atividade da disciplina de Sistemas O
 
 [Cat](https://github.com/Sara-Xavier/Sistemas_Operacionais/blob/main/Programas/Cat.c) - Este programa abre um txt, lê seus caracteres de acordo com a tabela ASCII e imprime este resultado.
 
+[Mkdir](https://github.com/Sara-Xavier/Sistemas_Operacionais/blob/main/Programas/Mkdir.c) - Este programa cria um diretório com um nome escolhido.
+
 
 
 # Algumas das funções de sistemas utilizadas:
