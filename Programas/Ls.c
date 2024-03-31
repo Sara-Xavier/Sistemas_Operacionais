@@ -1,43 +1,62 @@
-#include <stdio.h>      // Biblioteca de entrada/saída padrão de C
-#include <stdlib.h>     // Biblioteca de informações sobre o sistema, memória dinâmica e processos
-#include <dirent.h>     // Biblioteca para manipulação de diretórios em C.
-#include <unistd.h>     // Biblioteca da função 'getcwd'
+#include <stdio.h>
+#include <stdlib.h>
+#include <dirent.h>
+#include <unistd.h> // Para a função getcwd()
 
-
-int main(int argc, char *argv[]){
+int main(int argc, char *argv[]) {
     char *dir_path;
 
-    if (argc == 1){
-        dir_path = getcwd(NULL, 0); //Verificando se diretorio está como argumento, se nenhumn for verificado abre o diretorio atual
-        if (dir_path == NULL){
-            perror("Erro ao abrir diretório de trabalho atual");
-            return 1;
-        }
+    // Verifica se o usuário especificou um diretório como argumento
+    if (argc == 2) {
+        dir_path = argv[1]; // Usa o diretório fornecido como argumento
+    } else if (argc == 1) {
+        // Se nenhum diretório foi especificado, solicita ao usuário que insira o diretório desejado
+        printf("Digite o caminho do diretório (ou pressione Enter para usar o diretório atual): ");
+        char input[256];
+        fgets(input, sizeof(input), stdin);
         
-    }
+        // Remove o caractere de nova linha do final da string, se presente
+        if (input[strlen(input) - 1] == '\n') {
+            input[strlen(input) - 1] = '\0';
+        }
 
-    else if(argc == 2){
-        dir_path == argv[1];
-    }
-
-    else{ //Else criado para não receber mais de um argumento. Caso isso aconteça, dará erro
-        fprintf(stderr, "Uso correto: %s [diretorio]/n", argv[0]);
+        // Se o usuário não digitou nada, use o diretório de trabalho atual
+        if (strlen(input) == 0) {
+            dir_path = getcwd(NULL, 0);
+            if (dir_path == NULL) {
+                perror("Erro ao obter o diretório de trabalho atual");
+                return 1;
+            }
+        } else {
+            dir_path = input; // Usa o diretório fornecido pelo usuário
+        }
+    } else {
+        fprintf(stderr, "Uso correto: %s [diretório]\n", argv[0]);
         return 1;
     }
 
-    DIR *dir = opendir(dir_path):
-    if (dir == NULL){
-        perror("Erro ao abrir diretório");
-        free(dir_path);  //Liberando memória alocada por 'getcwd()'
+    // Abre o diretório especificado
+    DIR *dir = opendir(dir_path);
+    if (dir == NULL) {
+        perror("Erro ao abrir o diretório");
+        if (argc == 1) {
+            free(dir_path);
+        }
+        return 1;
     }
 
+    // Lê os nomes dos arquivos no diretório e imprime na tela
     struct dirent *entry;
-    while ((entry = readdir(dir)) != NULL){
-        printf("%s/n", entry->d_name);
+    while ((entry = readdir(dir)) != NULL) {
+        printf("%s\n", entry->d_name);
     }
 
-    closedir(dir);               // Fecha diretório
-    free(dir_path);              // Libera memória alocada
-    return 0;
+    // Fecha o diretório
+    closedir(dir);
 
+    if (argc == 1) {
+        free(dir_path);
+    }
+
+    return 0;
 }

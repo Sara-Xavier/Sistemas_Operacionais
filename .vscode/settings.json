@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "Date.C": "cpp",
-        "time.h": "c"
+        "time.h": "c",
+        "cwchar": "c",
+        "ostream": "c",
+        "dirent.h": "c"
     }
 }
