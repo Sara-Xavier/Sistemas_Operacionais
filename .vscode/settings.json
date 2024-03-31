@@ -4,6 +4,7 @@
         "time.h": "c",
         "cwchar": "c",
         "ostream": "c",
-        "dirent.h": "c"
+        "dirent.h": "c",
+        "stdio.h": "c"
     }
 }
