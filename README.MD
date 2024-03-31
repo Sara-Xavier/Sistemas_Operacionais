@@ -23,6 +23,8 @@ Olá, este repositório é destinado a uma atividade da disciplina de Sistemas O
 
 [Mv](https://github.com/Sara-Xavier/Sistemas_Operacionais/blob/main/Programas/Mv.c) - Este programa move arquivos.
 
+[Cat](https://github.com/Sara-Xavier/Sistemas_Operacionais/blob/main/Programas/Cat.c) - Este programa abre um txt, lê seus caracteres de acordo com a tabela ASCII e imprime este resultado.
+
 
 
 # Algumas das funções de sistemas utilizadas:
