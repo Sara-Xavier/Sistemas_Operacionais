@@ -1,16 +1,18 @@
-#include <stdio.h>  //Esta é a biblioteca padrão de entrada e saída
-#include <stdlib.h> // Biblioteca de informações sobre o sistema
-#include <time.h>   // Esta é a biblioteca de manipulação/gerenciamento de tempo
+#include <stdio.h>    // Biblioteca de entrada/saída padrão de C
+#include <stdlib.h>   // Biblioteca de informações sobre o sistema, memória dinâmica e processos
+#include <time.h>     // Biblioteca de manipulação/gerenciamento de tempo
 
 int main() {
-    FILE *uptimeFile = fopen("/proc/uptime", "r");
+     FILE *uptimeFile = fopen("/proc/uptime", "r"); 
+                      //Criamos a variável 'uptimeFile', que é um ponteiro para o arquivo '/proc/uptime', 
+                      // que utiliza 'fopen" para abrir tal arquivo
     if (uptimeFile == NULL) {
         fprintf(stderr, "Erro ao abrir o arquivo /proc/uptime\n");
         return 1;
     }
 
-    double uptimeSeconds;
-    if (fscanf(uptimeFile, "%lf", &uptimeSeconds) != 1) {
+    double uptimeSeconds; // Variável do tipo Double para armazenar tempo de atividade do sistema em segundos
+    if (fscanf(uptimeFile, "%lf", &uptimeSeconds) != 1) { //"fscanf" lê o tempo de atividade do arquivo uptimeFile.
         fprintf(stderr, "Erro ao ler o tempo de atividade\n");
         fclose(uptimeFile);
         return 1;
