@@ -5,6 +5,7 @@
         "cwchar": "c",
         "ostream": "c",
         "dirent.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "types.h": "c"
     }
 }
