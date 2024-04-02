@@ -1,0 +1,16 @@
+2.Como é dividida a memória de um processo? (Explique a área de texto, dados, heap e pilha)
+
+A memória geralmente é dividida em quatro áreas principais: área de texto, dados, heap e pilha. 
+- A área de texto contém o código executável do programa. Contém as intruções de máquina que o processador executa. 
+Essa parte é só de leitura, não se pode editar o código do programa. É comum que vários processos dividam esta área 
+enquanto estão executando o mesmo programa.
+- A área de dados é dividida em duas: Dados inicializados e dados não inicializados. 
+Dados inicializados: armazenam variáveis globais e estáticas do programa, que são inicializados com valores
+específicos.
+Dados não inicializados: Armazena variáveis globais e estáticas que não foram inicializadas explicitamente pelo programador.
+Elas são inicializadas com zero ou valores padrão pelo sistema operacional antes da execução do programa. 
+- Heap: Esta área é dinâmica, usada para alocação de memória durante a execução do programa. Ela cresce dinamicamente 
+conforme o necessário. É usada para dados sem tamanho fixo, como arrays dinâmicos e objetos. 
+- Pilha: área que armazena informações sobre chamadas de função e variáveis locais. Cada vez que uma função é chamada,
+as informações relevantes, como parâmetros de função e endereço de retorno, são empilhadas na pilha.
+As variáveis locais de uma função também são armazenadas na pilha.

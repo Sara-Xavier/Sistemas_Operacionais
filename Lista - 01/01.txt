@@ -1,0 +1,4 @@
+1. O que é um processo?
+
+Um processo é um programa em execução em um S.O. Ele representa os dados desse programa, como código, variáveis
+e estados de execução. 
