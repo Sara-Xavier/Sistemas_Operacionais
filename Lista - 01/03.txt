@@ -1,0 +1,9 @@
+3. Explique os estados esperando, rodando e pronto de um processo. Quais as possíveis transições?
+
+- Esperando: O processo está aguardando por algum evento externo ou recurso. 
+Pode ser I/O de disco ou de usuário, por exemplo, Ou um processo de transição, quando o processo
+precisa esperar por evento externo ou recurso. 
+- Rodando: Momento em que o processo está sendo executado pelo processador. Os processos de transição desta
+etapa é quando o processo é escolhido para execução pelo escalonador do S.O.
+- Pronto: Processo pronto para ser executado, aguardando a disponibilidade de tempo da CPU. As transições
+acontecem quando o processador fica livre, e o processo pronto é escolhido para rodar. 
