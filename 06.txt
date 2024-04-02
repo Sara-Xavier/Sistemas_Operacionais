@@ -1,0 +1,3 @@
+Escreva o que será impresso pela LINHA A.
+
+11
