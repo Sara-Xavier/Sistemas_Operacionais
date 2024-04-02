@@ -1,6 +1,6 @@
 
 # Sistemas Operacionais - Chamadas de Sistemas
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=ENTREGUE&color=GREEN&style=for-the-badge)
 
 
 Olá, este repositório é destinado a uma atividade da disciplina de Sistemas Operacionais, ministrada pelo professor Jorgiano. 
