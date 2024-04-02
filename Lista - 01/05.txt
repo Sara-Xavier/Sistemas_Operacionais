@@ -1,0 +1,17 @@
+5. Descreva, passo a passo, as ações do núcleo (kernel) durante uma troca de contexto entre processos.
+
+Enquanto as trocas de contexto acontecem entre processos, o kernel do S.O. realiza uma série
+de ações que salvam o estado do processo que está sendo executado no momento:
+- Timer interrupt: o temporizador interrompe a execução do processo atual após
+o término de seu quantum de tempo.
+- Salvamento do contexto do processo atual: o kernel salva o estado do processo atual, que inclui o valor dos 
+bancos registradores da CPU, o contador de programa, o ponteiro de pilha e outros contextos relevantes. Isso
+garante ao processo que, quando o mesmo for retomado mais tarde, ele possa continuar de onde parou. 
+- Seleção do próximo processo: o nucleo decide qual processo vai ser executado em seguida, com base em sua 
+política de escalonamento. 
+Isso pode envolver a seleção de um novo processo da fila de processos prontos.
+- Restauração do contexto dos próximos processos: o kernel restaura o estado do próximo processo selecionado,
+carregando os valores salvos de seus registradores, PC, SP e outros contextos relevantes.
+Isso prepara o próximo processo para execução.
+- Troca de contextos concluída: com o contexto do próximo processador restaurado, o controle é transferido
+para o novo processo e sua execução é retomada a partir do ponto onde foi interrompida. 
