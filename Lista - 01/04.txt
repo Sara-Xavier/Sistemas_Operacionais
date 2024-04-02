@@ -1,0 +1,10 @@
+4. Além dos estados do processo da questão anterior, detalhe os estados novo e terminado de um processo
+explicando as possíveis transições.
+
+- Novo: estado inicial de processo, recém criado pelo S.O., onde o sistema está configurando
+as estruturas de dados para o processo. As transições acontecem para o estado pronto quando
+está pronto para começar a execução, após ter sido totalmente inicializado pelo S.O.
+- Terminado: Estado final de processo, indica execução concluída. Ocorre por uma variedade de razões,
+como conclusão de suas operações, uma chama explícita para encerrar o processo ou um erro fatal.
+Transições: a transição acontece do estado Rodando ou Pronto para o estado Terminado quando sua 
+execução é concluída. 
