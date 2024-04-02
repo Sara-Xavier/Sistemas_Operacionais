@@ -1,0 +1,29 @@
+7. Sobre o programa a seguir
+Programa 2 - fork2.c
+#include <stdio.h>
+#include <unistd.h>
+int main(int argc, char ∗∗argv){
+fork();
+fork();
+fork();
+fork();
+return 0;
+}
+
+Desenhe a árvore de processos.
+
+                    Processo Inicial (P0)
+                          /      |      \
+               Processo 1 (P1)  P0     P0
+                /       |       \
+      Processo 2 (P2)  P1      P1
+       /       |        \
+Processo 3 (P3) P2      P2
+   /      |       \
+P3     P3     P3
+
+o processo inicial é representado como P0. Cada chamada de fork() cria um novo processo filho. 
+Como o código tem quatro chamadas de fork(), cada processo pai cria quatro processos filhos, 
+resultando em uma árvore de quatro níveis. Cada processo filho herda as chamadas de fork() 
+feitas pelos processos pai anteriores. Por exemplo, o Processo 1 (P1) é criado pelo Processo 
+Inicial (P0) e, por sua vez, cria três processos filhos (Processo 2, Processo 1 e Processo 1). 
