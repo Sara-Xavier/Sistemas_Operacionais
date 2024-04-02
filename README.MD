@@ -1,5 +1,5 @@
 
-# Sistemas Operacionais 
+# Sistemas Operacionais - Chamadas de Sistemas
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=GREEN&style=for-the-badge)
 
 
@@ -43,3 +43,8 @@ Olá, este repositório é destinado a uma atividade da disciplina de Sistemas O
 - Cat: fopen() abriu arquivo especificado, fgetc() lê carecteres dos arquivos, byte a byte e fclose() fecha os arquivos após a leitura.
 
 - Mkdir: mkdir() cria um novo diretório com o nome.
+
+
+# Vale ressaltar que:
+
+Aqui também (neste repositório), existem arquivos e programas sobre a matéria de Sistemas Operacionais. A atividade de chamadas de sistemas foi entregue dia 31/04 e nenhum commit após essa data será considerado pelo professor. 
