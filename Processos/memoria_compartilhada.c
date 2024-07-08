@@ -1,6 +1,6 @@
 #define BUFFER_SIZE 10
 typedef struct {
-. . .
+    
 } item;
 
 item buffer[BUFFER_SIZE];
