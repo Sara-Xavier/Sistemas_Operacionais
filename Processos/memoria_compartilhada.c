@@ -1,3 +1,12 @@
+#define BUFFER_SIZE 10
+typedef struct {
+. . .
+} item;
+
+item buffer[BUFFER_SIZE];
+int in = 0;
+int out = 0;
+
 /* produção de dados*/
 
 item next_produced;
