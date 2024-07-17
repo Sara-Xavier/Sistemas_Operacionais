@@ -1,0 +1,17 @@
+1. Descreva os dois principais modelos de comunicação interprocessos (IPC) em sistemas operacionais multipro-
+cessados (Memória compartilhada e Troca de mensagens). Faça uma análise comparativa sobre as vantagens e
+desvantagens de cada um.
+
+
+Resposta:
+O modelo de processo que aprendemos até então supõe que um processo é um programa em execução com uma 
+único thread de controle. O sistema de memória compartilhada requer que os processos cooperativos em comunicação estabeleçam uma região de memória 
+compartilhada. Geralmente, a região de memória compartilhada reside no espaço de endereçamento do processo que cria 
+o segmento de memória compartilhada. Para outros processos se comunicarem usando esse segmento de memória compartilhada, devem anexa-la ao seu 
+espaço de endereçamento.
+
+*Desvantagens*
+- Desempenho reduzido quando comparado a toca de mensagens, já que os problemas com coerência de cache são frequentes 
+(os dados compartilhados migram entre os diversos caches). Se o número de núcleos do sistema for maior, a transmissão de mensagens
+provavelmente atenderá melhor.
+
