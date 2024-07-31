@@ -5,13 +5,33 @@ desvantagens de cada um.
 
 Resposta:
 O modelo de processo que aprendemos até então supõe que um processo é um programa em execução com uma 
-único thread de controle. O sistema de memória compartilhada requer que os processos cooperativos em comunicação estabeleçam uma região de memória 
-compartilhada. Geralmente, a região de memória compartilhada reside no espaço de endereçamento do processo que cria 
-o segmento de memória compartilhada. Para outros processos se comunicarem usando esse segmento de memória compartilhada, devem anexa-la ao seu 
-espaço de endereçamento.
+único thread de controle. Temos então, duas formas de comunicação estudadas até então:
 
-*Desvantagens*
-- Desempenho reduzido quando comparado a toca de mensagens, já que os problemas com coerência de cache são frequentes 
-(os dados compartilhados migram entre os diversos caches). Se o número de núcleos do sistema for maior, a transmissão de mensagens
-provavelmente atenderá melhor.
+
+Memória compartilhada: 
+Vantagens:
+- Alto desempenho: é mais rápido, evita a sobrecarga de passagem de mensagens no Kernel do S.O.
+- Baixa latência: escrita e leitura de dados são operações rápidas, minimizando latência na troca de informações
+- Eficiência para grandes volumes de dados: evita a cópia de múltiplos dados, que ocorre na comunicação que usa troca de mensagens como meio
+de comunicação
+
+Desvantagens:
+- Sincronização é mais difícil: semâforos e outros métodos de sincronização são utilizados para evitar inconsistências nos dados
+- Depuração é complicada: é difícil depurar de forma que multiplos processos não interfiram uns nos outros, de maneira indesejada
+- Segurança pode ser comprometida: se a segurança for mal gerenciada, já que processos mal intencionados podem acessar áreas de memórias compartilhadas
+
+
+Troca de mensagens: 
+Vantagens:
+- Facilidade de sincronização: a mecânica de enviar/receber mensagens já garante a ordem das operações
+- Isolamento dos processos: cada processo tem seu espaço devido na memória, aumentando a segurança e garantindo a redução de interferencias acidentais dos processos
+- Escalabilidade: mensagens podem ser enviadas de diferentes máquinas da rede
+
+Desvantagens:
+- Menor desempenho: a comunicação de troca de mensagens pode ser mais lenta por causa da sobrecarga  de passagem no Kernel, e também por causa da cópia de dados
+- Latência mais alta: o tempo de transmissão da mensagem em sistemas distribuídos é maior
+
+
+Ambos os métodos têm suas próprias vantagens e desvantagens, 
+e a escolha entre eles depende dos requisitos específicos do sistema e das características dos processos que precisam se comunicar.
 
