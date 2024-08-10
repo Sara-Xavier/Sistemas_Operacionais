@@ -78,5 +78,5 @@ int main() {
         getline(cin, input);
         executar_comando(input);
     }
-    return 0;
+    return 0;
 }
