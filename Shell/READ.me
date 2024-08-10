@@ -1,0 +1,42 @@
+#Implementação mínima de shell em C++ para projeto de Sistemas Operacionais - IFRN
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=ENTREGUE&color=GREEN&style=for-the-badge)
+
+- Esta atividade consiste em estudar as aplicações de chamada de sistema do Linux, de forma mais profunda.
+Essa mini shell simula o comportamento de um terminal de linha de comando. Ela lida com comandos internos
+e tenta executar comandos externos disponíveis no sistema. 
+https://linasm.sourceforge.net/docs/syscalls/
+
+#Funcionamento:
+
+1 - Entrada do usuário:
+- O programa espera um comando do usuário, podendo ser um comando simples ou não
+
+2 - Processamento:
+- O comando é extraído dos demais argumentos. Se o usuário inputar "ls-1", "ls" é identificado 
+como o comando. 
+- Os argumentos restantes são separados e arnazenados
+
+3 - Verificação do segundo plano: 
+- Se o último argumento for um "&", o comando vai rodar em segundo plano. A shell não vai
+esperar o comando terminar  para continuar aceitando novos comandos. O "&" é removido da lista
+de argumentos
+
+4 - Execução
+- Comando interno: se o comando for "exit", a shell encerra
+- Comando externo: o programa tenta localizar o comando no diretório '/bin/', onde muitos 
+comandos básicos estão armazenados, dentro do sistema
+- Se o comando existe e é executável, a shell cria um processo novo para executar esse comando.
+- O processo pai (shell) aguarda o processo filho (comando) encerrar, a menos que o mesmo seja
+executado em segundo plano
+- Se o comando não for encontrado ou executável, a shell mostrará uma mensagem de erro para informar
+o usuário
+
+5 - Loop:
+-  A shell vai rodar infinitamente, até que o usuário digite "exit"
+
+6 - Limitações:
+- A mini shell não oferece suporte a comandos complexos, como encadeamento de pipes ou 
+redirecionamentos, que são comuns na maioria das shells
+- A shell não busca comandos em múltiplos diretórios, apenas no diretório '/bin/'
+
+Obrigada por ler até aqui!
